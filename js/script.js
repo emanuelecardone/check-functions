@@ -35,20 +35,21 @@ function checkSpecialCharacters(string){
 }
 
 // Funzione che controlla la presenza di caratteri numerici in una singola parola
+// Nota: questa funzione può anche controllare la presenza di numeri in una stringa
 //
-// string -> stringa da analizzare, proveniente da un prompt o dal codice
+// word -> parola da analizzare, proveniente da un prompt o dal codice
 //
-// return -> la funzione ritorna vero se trova numeri nella stringa, altrimenti ritorna falso
+// return -> la funzione ritorna vero se trova numeri nella parola, altrimenti ritorna falso
 //
 // 1) Definisco una variabile flag che dà falso di default
-// 2) Controllo ogni lettera della stringa
+// 2) Controllo ogni lettera della parola
 // 3) Vedo se c'è almeno un carattere che è un numero
-// 4) Escludo dal check gli spazi tra le stringhe per evitare errori
+// 4) Escludo dal check gli spazi tra le stringhe per evitare errori (nel caso lo applichi ad una stringa)
 // 5) Applico il return in base al punto 3
-function checkNumbers(string){
+function checkNumbers(wordOrString){
     let numberCheck = false;
-    for(let i = 0; i < string.length; i++){
-        if(!isNaN(string[i]) && string[i] !== ' '){
+    for(let i = 0; i < wordOrString.length; i++){
+        if(!isNaN(wordOrString[i]) && wordOrString[i] !== ' '){
             numberCheck = true;
         }
     }
