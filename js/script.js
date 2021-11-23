@@ -15,7 +15,7 @@ do{
 } while(lettersTest);
 
 
-// Funzione che controlla la presenza di caratteri speciali in una stringa
+// Funzione che controlla la presenza di caratteri speciali in una stringa, parola o numero
 //
 // string -> stringa da analizzare, proveniente da un prompt o dal codice
 //
